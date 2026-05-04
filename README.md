@@ -28,6 +28,30 @@ k8s/       → Kubernetes manifests (Deployments + Services)
 
 ---
 
+## 📖 About This Project
+
+This project started as a hands-on exercise to understand how a **3-tier architecture** works when deployed on Kubernetes. I wanted to go beyond tutorials and actually build something end-to-end:
+
+- **Frontend**: A simple HTML + JavaScript page to interact with users.
+- **Backend**: A Node.js + Express server that exposes APIs and connects to the database.
+- **Database**: MySQL running inside Kubernetes, storing user data.
+
+### 🎯 Goals
+- Learn how to containerize applications with Docker.
+- Practice writing Kubernetes manifests for Deployments and Services.
+- Understand how different tiers communicate inside a cluster.
+- Gain confidence in debugging pods, logs, and CrashLoopBackOff errors.
+
+### 💡 What I Learned
+- How to structure a project into clean folders (`backend/`, `frontend/`, `k8s/`).
+- How to build and push Docker images to Docker Hub.
+- How to use Kubernetes Services for internal communication between tiers.
+- How to troubleshoot common errors (invalid `package.json`, duplicate imports, DB connection issues).
+- The importance of retry logic and graceful error handling in distributed systems.
+
+This repo is both a **learning journey** and a **portfolio project** — something I can share to demonstrate practical skills in cloud-native development.
+---
+
 ## 🛠️ Setup Instructions
 
 ### 1. Clone the repo
