@@ -1,7 +1,7 @@
 ```markdown
 # 🌐 3-Tier Kubernetes Application
 
-A simple 3-tier application deployed on Kubernetes:
+iA simple 3-tier application deployed on Kubernetes:
 - **Frontend**: HTML + JavaScript page
 - **Backend**: Node.js + Express server
 - **Database**: MySQL
@@ -17,7 +17,7 @@ backend/   → Node.js app + Dockerfile
 frontend/  → Static HTML frontend + optional Dockerfile
 k8s/       → Kubernetes manifests (Deployments + Services)
 ```
-
+i
 ---
 
 ## 🚀 Features
@@ -25,6 +25,8 @@ k8s/       → Kubernetes manifests (Deployments + Services)
 - Backend connects to MySQL database
 - Kubernetes Services provide internal communication
 - Demonstrates multi-tier architecture on Minikube
+
+---
 
 ---
 
@@ -50,6 +52,7 @@ This project started as a hands-on exercise to understand how a **3-tier archite
 - The importance of retry logic and graceful error handling in distributed systems.
 
 This repo is both a **learning journey** and a **portfolio project** — something I can share to demonstrate practical skills in cloud-native development.
+
 ---
 
 ## 🛠️ Setup Instructions
