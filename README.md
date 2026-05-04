@@ -33,7 +33,7 @@ Code
 ```bash
 git clone https://github.com/<your-username>/3-tier-k8s-app.git
 cd 3-tier-k8s-app
-2. Build and push Docker images
+# 2. Build and push Docker images
 bash
 cd backend
 docker build -t <dockerhub-username>/backend:latest .
@@ -42,13 +42,13 @@ docker push <dockerhub-username>/backend:latest
 cd ../frontend
 docker build -t <dockerhub-username>/frontend:latest .
 docker push <dockerhub-username>/frontend:latest
-3. Deploy to Kubernetes
+# 3. Deploy to Kubernetes
 bash
 kubectl apply -f k8s/
-4. Verify pods
+# 4. Verify pods
 bash
 kubectl get pods -n 3-tier-app
-5. Access frontend
+# 5. Access frontend
 bash
 kubectl port-forward svc/frontend-service 8080:80
 Open http://localhost:8080 (localhost in Bing) in your browser.
