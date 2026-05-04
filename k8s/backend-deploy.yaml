@@ -1,0 +1,33 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: backend-deploy
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      tier: backend
+  template:
+    metadata:
+      labels:
+        tier: backend
+    spec:
+      containers:
+        - name: node
+          image: mirza002/backend:2.2
+          ports:
+            - containerPort: 3000
+          env:
+            - name: DB_HOST
+              value: db-service
+            - name: DB_USER
+              value: root
+            - name: DB_PASSWORD
+              value: my-secret-pw
+          resources:
+            requests:
+              memory: "128Mi"
+              cpu: "250m"
+            limits:
+              memory: "256Mi"
+              cpu: "500m"
