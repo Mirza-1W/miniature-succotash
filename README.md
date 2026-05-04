@@ -25,7 +25,8 @@ k8s/       → Kubernetes manifests (Deployments + Services)
 git clone https://github.com/<your-username>/3-tier-k8s-app.git
 cd 3-tier-k8s-app
 **
-2. Build and push Docker images**
+
+### 2. Build and push Docker images
 
 cd backend
 docker build -t <dockerhub-username>/backend:latest .
@@ -34,23 +35,32 @@ docker push <dockerhub-username>/backend:latest
 cd ../frontend
 docker build -t <dockerhub-username>/frontend:latest .
 docker push <dockerhub-username>/frontend:latest
+**
 
-3. Deploy to Kubernetes
+### 3. Deploy to Kubernetes
+
 bash
-4. Verify pods
+kubectl apply -f k8s/
+**
+
+### 4. Verify pods
 bash
 kubectl get pods -n 3-tier-app
-5. Access frontend
+**
+
+### 5. Access frontend
 bash
 kubectl port-forward svc/frontend-service 8080:80
-Open http://localhost:8080 (localhost in Bing) in your browser.
+**
+
+### Open http://localhost:8080 (localhost in Bing) in your browser.
 
 📸 Demo
 GET / → returns "Hello from Backend!"
 
 GET /users → returns rows from MySQL demo.users table
 
-🤝 Contributing
+### 🤝 Contributing
 Feel free to fork and improve the project!
 
 
